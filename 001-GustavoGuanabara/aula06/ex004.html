@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu primeiro programa em Javascript</title>
+    <style>
+        body { 
+            background-color: lightblue;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            color: black;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldicao</p>
+    <script>
+      var nome = window.prompt('Qual é o seu nome? ')
+      document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras. <br>`)
+      document.write(`Seu nome em maiusculas é ${nome.toUpperCase()}. `)
+    </script>
+  </body>
+</html>
