@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PF</title>
+  </head>
+  <body>
+    <h1>Qual a sua nacionalidade</h1>
+    Insira seu país:
+    <input type="text" name="nacionalidade" id="nacionalidade" />
+    <input type="button" value="Confirmar" onclick="verificar()" />
+    <div id="resultado"></div>
+    <script>
+      function verificar() {
+        var resposta = document.querySelector("input#nacionalidade");
+        var resultado = document.querySelector("div#resultado");
+        resultado.innerHTML = `<p>Você nasceu no pais ${resposta.value}.</p>`;
+
+        if (resposta.value !== "brasil") {
+          resultado.innerHTML += `<p>Você é estrangeiro, apresente seu passaporte</p>`;
+        } else {
+          resultado.innerHTML += `<p>Você é brasileiro, apresente seu cpf</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
